@@ -1,6 +1,6 @@
 .home_modle{position:absolute;right:360px;bottom:0;}
 .contain{height:813px;position: relative;padding-left: 360px;padding-right: 360px;}
-.contain .text1,.text2{font-size: 48px;font-family:"叶根友毛笔行书2.0版";display:block;position:absolute;}
+.contain .text1,.text2{font-size: 48px;font-family:"叶根友毛笔行书2.0版","华文行楷";display:block;position:absolute;}
 .text1{left:360px;top:60px;}
 .text2{left:480px;top:190px;}
 .contain .cycle_pic{width:700px;height:258px;position:absolute;left:363px;bottom:110px;}
