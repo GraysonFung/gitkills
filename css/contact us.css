@@ -1,0 +1,13 @@
+.contain{padding-left:360px;padding-right:360px;}
+.contain_top{height:100px;border-bottom:1px solid #4146ae;position:relative;}
+.contain_top .top_left{position:absolute;bottom:0;font-family: "arial Regular";font-size:18px;line-height--:0;}
+.contain_top .top_left span{font-family: "微软雅黑 Regular";font-size:20px;line-height:32px;}
+.contain_top .top_right{position:absolute;right:10px;bottom:2px;font-size:12px;font-family:"宋体";}
+.contain_top .top_right a{color:#ff0000;}
+.form{border-top:4px #fefefe solid;border-bottom:4px #fefefe solid;height:686px;padding:0 270px 0 300px;position:relative;}
+.form form{font-size:14px;font-family:"宋体";line-height:26px;}
+.form form p{padding:27px 0 32px 0;}
+.form form input{height:27px;width:209px;border:1px #aaaaaa solid;vertical-align:middle;background:transparent;color:#fff;}
+.form form label{line-height:48px;display:inline-block;vertical-align:middle;width:70px;text-align: right;}
+textarea{vertical-align:top;height:145px;width:535px;border:1px #aaaaaa solid;background:transparent;color:#fff;}
+#submit{width:156px;height:40px;background:red;font-size:26px;font-family:"微软雅黑";border:none;color:#fefefe;position:absolute;right:294px;bottom:24px;}

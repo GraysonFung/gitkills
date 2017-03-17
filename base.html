@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>base</title>
+<link rel="stylesheet" type="text/css" href="css/base.css">
+<script>
+window.onload = function(){
+	var oUl_nav = document.getElementById('ul_nav');
+	var arrLi = oUl_nav.getElementsByTagName('li');
+	for (var i = 0; i < arrLi.length; i++) {
+		arrLi[i].index = i;
+		arrLi[i].onclick = function(){
+			for (var i = 0; i < arrLi.length; i++) {
+				if (i != this.index) {
+					arrLi[i].className='';
+				}
+			}
+			this.className = 'actived';
+		};
+	}
+};
+</script>
+</head>
+<body>
+<div class="wraper">
+	<div class="top">
+		<ul class="top_left">
+			<a href="#"><li>欢迎进入第二印象！</li></a>
+			<li class="top_left_entry">[<a href="#">登录</a>/<a href="#">免费注册</a>]</li>
+		</ul>
+		<ul class="top_right">
+			<a href="#"><li>会员中心</li></a>
+			<a href="#"><li>我的收藏</li></a>
+			<a href="#"><li>我的订单(0)</li></a>
+			<a class="top_right_buycar" href=""><img src="images/base_img/buycar_puclic.png"/><li >购物车</li></a>
+		</ul>
+	</div>
+	<header>
+		<a href="#"><img class="header_logo" src="images/base_img/logo_public.png"/></a>
+		<nav>
+			<ul id="ul_nav">
+				<a href="#"><li class="actived"><span>首页</span><br/>HOME</li></a>
+				<a href="#"><li><span>品牌介绍</span><br/>BRAND</li></a>
+				<a href="#"><li><span>新闻中心</span><br/>NEWS</li></a>
+				<a href="#"><li><span>产品中心</span><br/>PRODUCT</li></a>
+				<a href="#"><li><span>联系我们</span><br/>CONTACT US</li></a>
+			</ul>
+		</nav>
+	</header>
+	<div class="contain">
+
+	</div>
+	<footer>
+		<p class="footer_link">
+			 <ul>
+			 	<li class="noborder">友情链接:</li>
+			 	<a href="#">
+			 		<li class="noborder">关于我们</li>
+			 	</a>
+			 	<a href="#">
+			 		<li >热门服务</li>
+			 	</a>
+			 	<a href="#">
+			 		<li >安全中心</li>
+			 	</a>
+			 	<a href="#">
+			 		<li >网站地图</li>
+			 	</a>
+			 	<a href="#">
+			 		<li>联系方式</li>
+			 	</a>
+			 </ul>
+		</p>
+		 <p class="footer_bottom">
+			 <span>版权所有</span><img src="images/base_img/footer_bottom.png">
+			 <span>第二印象NO.2IMAGE</span>
+		 </p>
+	</footer>
+</div>
+</body>
+</html>

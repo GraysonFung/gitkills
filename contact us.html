@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="author" content="grayson">
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	  <!--[if lt IE 9]>
+	  <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	  <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+	<title>contact us</title>
+	<link rel="stylesheet" type="text/css" href="css/base.css">
+	<link rel="stylesheet" type="text/css" href="css/contact us.css">
+<script>
+window.onload = function(){
+	function nav_click(){
+		var oUl_nav = document.getElementById('ul_nav');
+		var arrLi = oUl_nav.getElementsByTagName('li');
+		for (var i = 0; i < arrLi.length; i++) {
+			arrLi[i].index = i;
+			arrLi[i].onclick = function(){
+				for (var i = 0; i < arrLi.length; i++) {
+					if (i != this.index) {
+						arrLi[i].className='';
+					}
+				}
+				this.className = 'actived';
+			};
+		}
+	};
+	nav_click();
+};
+</script>
+</head>
+<body>
+<div class="wraper">
+	<div class="top">
+		<ul class="top_left">
+			<a href="index.html"><li>欢迎进入第二印象！</li></a>
+			<li class="top_left_entry">[<a href="#">登录</a>/<a href="#">免费注册</a>]</li>
+		</ul>
+		<ul class="top_right">
+			<a href="#"><li>会员中心</li></a>
+			<a href="#"><li>我的收藏</li></a>
+			<a href="#"><li>我的订单(0)</li></a>
+			<a class="top_right_buycar" href="#"><img src="images/base_img/buycar_puclic.png"/><li >购物车</li></a>
+		</ul>
+	</div>
+	<header>
+		<a href="index.html"><img class="header_logo" src="images/base_img/logo_public.png"/></a>
+		<nav>
+			<ul id="ul_nav">
+				<a href="index.html"><li><span>首页</span><br/>HOME</li></a>
+				<a href="#"><li><span>品牌介绍</span><br/>BRAND</li></a>
+				<a href="#"><li><span>新闻中心</span><br/>NEWS</li></a>
+				<a href="#"><li><span>产品中心</span><br/>PRODUCT</li></a>
+				<a href="#"><li class="actived"><span>联系我们</span><br/>CONTACT US</li></a>
+			</ul>
+		</nav>
+	</header>
+	<div class="contain">
+		<div class="contain_top">
+			<div class="top_left">
+				<span>联系我们</span><br/>
+				Contact Us
+			</div>
+			<div class="top_right">
+				位置：<a href="#">联系我们</a>
+			</div>
+		</div>
+		<div class="form">
+			<form method="post"	action="">
+				<p>
+					杭州竣颐科技有限公司（第二印象营销中心）地址：杭州清江路158号置地国际金座十楼1007、1008号<br/>电话：0571-86882370、86882371<br/>
+					传真：0517-86962364<br/>
+					联系人：胡先生 13357102069
+				</p>
+				<label for="linkman">*联系人：</label>
+				<input type="text" name="" id="linkman" required="required" autofocus="autofocus" /><br/>
+				<label for="phone">*手机：</label>
+				<input type="text" name="" id="phone" required="required" /><br/>
+				<label for="e_mail">*E-mail：</label>
+				<input type="text" name="" id="e_mail" required="required" /><br/>
+				<label for="qq">QQ：</label>
+				<input type="text" name="" id="qq" /><br/>
+				<label for="address">*地址：</label>
+				<input type="text" name="" id="address" required="required" /><br/>
+				<label for="message">*留言内容:</label>
+				<textarea name="" id="message" required="required"></textarea><br/>
+				<label for="identifying_code">验证码：</label>
+				<input type="text" name="" id="identifying_code" required="required" /><br/>
+				<input type="submit" value="提交" id="submit"/>
+			</form>
+		</div>
+	</div>
+	<footer>
+		<p class="footer_link">
+			 <ul>
+			 	<li class="noborder">友情链接:</li>
+			 	<a href="#">
+			 		<li class="noborder">关于我们</li>
+			 	</a>
+			 	<a href="#">
+			 		<li >热门服务</li>
+			 	</a>
+			 	<a href="#">
+			 		<li >安全中心</li>
+			 	</a>
+			 	<a href="#">
+			 		<li >网站地图</li>
+			 	</a>
+			 	<a href="#">
+			 		<li>联系方式</li>
+			 	</a>
+			 </ul>
+		</p>
+		 <p class="footer_bottom">
+			 <span>版权所有</span><img src="images/base_img/footer_bottom.png">
+			 <span>第二印象NO.2IMAGE</span>
+		 </p>
+	</footer>
+</div>
+</body>
+</html>

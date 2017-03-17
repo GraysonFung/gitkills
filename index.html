@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="author" content="grayson">
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+	<title>home</title>
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	  <!--[if lt IE 9]>
+	  <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	  <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+	<link rel="stylesheet" type="text/css" href="css/base.css">
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+
+<script>
+window.onload = function (){
+	var oBtn_left = document.getElementById('btn_left');
+	var oBtn_right = document.getElementById('btn_right');
+	var oPic = document.getElementById('pic');
+	var arrLi = oPic.getElementsByTagName('li');
+	var arrDiv = oPic.getElementsByTagName('div');
+	var arrImg = oPic.getElementsByTagName('img');
+	var arrP = oPic.getElementsByTagName('p');
+	var arrImage = ['images/home_img/home_pic.gif','images/home_img/home_pic1.gif','images/home_img/home_pic2.gif','images/home_img/home_pic3.gif','images/home_img/home_pic4.gif'];
+	var arrText = ['2IMAGE休闲男装样品','描述1','描述2','描述3','描述4']
+	var arrPrice = ['¥123.00','¥100.00','¥200.00','¥300.00','¥400.00']
+	var num = 0 ;
+
+	// js简化
+	function change(){
+		arrImg[0].src = arrImage[num] ;
+		arrImg[1].src = arrImage[num+1] ;
+		arrImg[2].src = arrImage[num+2] ;
+		arrP[0].innerHTML = arrText[num]+'<span>'+arrPrice[num]+'</span>';
+		arrP[1].innerHTML = arrText[num+1]+'<span>'+arrPrice[num+1]+'</span>';
+		arrP[2].innerHTML = arrText[num+2]+'<span>'+arrPrice[num+2]+'</span>';
+	};
+	// 初始化：
+	change();
+	// 左右按钮的点击事件，图片与遮罩层上文字的同步轮播
+	oBtn_right.onclick = function (){
+		if (num+3< arrImage.length) {
+			num++;
+			change();
+		}else{
+			alert('亲，已经是最后一张了')
+		}
+	};
+	oBtn_left.onclick = function (){
+		if (num <= 0) {
+			alert('亲，这是第一张')
+		}else{
+			num--;
+			change();
+		}
+	};
+	// 图片上遮罩层的移入显示与移出消失
+	for (var i = 0; i < arrLi.length; i++) {
+		arrLi[i].index = i;
+		arrLi[i].onmouseover = function (){
+			arrDiv[this.index].style.display = 'block';
+		};
+		arrLi[i].onmouseout = function (){
+			arrDiv[this.index].style.display = 'none';
+		};
+	}
+	function nav_click(){
+		var oUl_nav = document.getElementById('ul_nav');
+		var arrLi = oUl_nav.getElementsByTagName('li');
+		for (var i = 0; i < arrLi.length; i++) {
+			arrLi[i].index = i;
+			arrLi[i].onclick = function(){
+				for (var i = 0; i < arrLi.length; i++) {
+					if (i != this.index) {
+						arrLi[i].className='';
+					}
+				}
+				this.className = 'actived';
+			};
+		}
+	};
+	nav_click();
+};
+</script>
+</head>
+<body>
+<div class="wraper">
+<img src="images/home_img/home_modle.png" class="home_modle"/ >
+	<div class="top">
+		<ul class="top_left">
+			<a href="#"><li>欢迎进入第二印象！</li></a>
+			<li class="top_left_entry">[<a href="#">登录</a>/<a href="#">免费注册</a>]</li>
+		</ul>
+		<ul class="top_right">
+			<a href="#"><li>会员中心</li></a>
+			<a href="#"><li>我的收藏</li></a>
+			<a href="#"><li>我的订单(0)</li></a>
+			<a class="top_right_buycar" href=""><img src="images/base_img/buycar_puclic.png"/><li >购物车</li></a>
+		</ul>
+	</div>
+	<header>
+		<a href="index.html"><img class="header_logo" src="images/base_img/logo_public.png"/></a>
+		<nav>
+			<ul id="ul_nav">
+				<a href="#"><li class="actived"><span>首页</span><br/>HOME</li></a>
+				<a href="#"><li><span>品牌介绍</span><br/>BRAND</li></a>
+				<a href="#"><li><span>新闻中心</span><br/>NEWS</li></a>
+				<a href="#"><li><span>产品中心</span><br/>PRODUCT</li></a>
+				<a href="contact us.html"><li><span>联系我们</span><br/>CONTACT US</li></a>
+			</ul>
+		</nav>
+	</header>
+	<div class="contain">
+		<span class="text1">卓越于心 精致于型</span>
+		<span class="text2">第二印象 一见钟情</span>
+		<div class="cycle_pic">
+			<div class="btn_left" id="btn_left">
+				<img src="images/home_img/home_leftBtn.png"/>
+			</div>
+			<div class="pic" id="pic" >
+				<a href="#">
+					<li>
+						<img src="" alt="product"/>
+						<div >
+							<p>
+								<span></span>
+							</p>
+						</div>
+					</li>
+				</a>
+				<a href="#">
+					<li>
+						<img src="" alt="product"/>
+						<div>
+							<p>
+								<span></span>
+							</p>
+						</div>
+					</li>
+				</a>
+				<a href="#">
+					<li>
+						<img src="" alt="product"/>
+						<div>
+							<p>
+								<span></span>
+							</p>
+						</div>
+					</li>
+				</a>
+			</div>
+			<div  class="btn_right" id="btn_right">
+				<img src="images/home_img/home_rightBtn.png" alt=""/>
+			</div>
+		</div>
+	</div>
+	<footer>
+		<p class="footer_link">
+			 <ul>
+			 	<li class="noborder">友情链接:</li>
+			 	<a href="#">
+			 		<li class="noborder">关于我们</li>
+			 	</a>
+			 	<a href="#">
+			 		<li >热门服务</li>
+			 	</a>
+			 	<a href="#">
+			 		<li >安全中心</li>
+			 	</a>
+			 	<a href="#">
+			 		<li >网站地图</li>
+			 	</a>
+			 	<a href="#">
+			 		<li>联系方式</li>
+			 	</a>
+			 </ul>
+		</p>
+		 <p class="footer_bottom">
+			 <span>版权所有</span><img src="images/base_img/footer_bottom.png">
+			 <span>第二印象NO.2IMAGE</span>
+		 </p>
+	</footer>
+</div>
+</body>
+</html>

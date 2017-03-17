@@ -1,0 +1,15 @@
+.home_modle{position:absolute;right:360px;bottom:0;}
+.contain{height:813px;position: relative;padding-left: 360px;padding-right: 360px;}
+.contain .text1,.text2{font-size: 48px;font-family:"叶根友毛笔行书2.0版";display:block;position:absolute;}
+.text1{left:360px;top:60px;}
+.text2{left:480px;top:190px;}
+.contain .cycle_pic{width:700px;height:258px;position:absolute;left:363px;bottom:110px;}
+.contain .btn_left{height:100%;float:left;padding-top:40px;padding-right:30px;}
+.contain .cycle_pic .pic{float:left;}
+.contain .cycle_pic .pic li{float:left;margin-right:14px;width:182px;height:258px;background:gray;position: relative;}
+.contain .cycle_pic .pic li div{position:absolute;bottom: 0;right: 0px;width:182px;height:258px;background:url(../images/home_img/pic_div.png);display:none;}
+.contain .cycle_pic .pic li div p{position:absolute;bottom:10px;font:14px '宋体';width:182px;text-align:center;}
+.contain .cycle_pic .pic li div p span{display:block;line-height:30px;}
+.contain .cycle_pic .pic li img{}
+.contain .btn_right{height:100%;float:right;padding-top:40px;}
+.contain img:hover{cursor: pointer;}
